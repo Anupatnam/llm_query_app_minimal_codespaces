@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head><title>LLM Query App</title></head>
+<head>
+  <title>LLM Query App</title>
+</head>
 <body>
   <h2>Ask a Question</h2>
   <form method="POST" action="/query">
@@ -9,10 +11,13 @@
   </form>
 
   {% if groq_response %}
-    <h3>Groq (Mock):</h3><p>{{ groq_response }}</p>
+    <h3>Groq Response:</h3>
+    <p>{{ groq_response }}</p>
   {% endif %}
+
   {% if gemini_response %}
-    <h3>Gemini (Mock):</h3><p>{{ gemini_response }}</p>
+    <h3>Gemini Response:</h3>
+    <p>{{ gemini_response }}</p>
   {% endif %}
 </body>
 </html>
